@@ -14,10 +14,8 @@ class SensorHcSr04
     SensorHcSr04();
     SensorHcSr04(unsigned int triggerPin, unsigned int echoPin);
     SensorHcSr04(unsigned int triggerPin, unsigned int echoPin, unsigned long timeout);
-    SensorHcSr04(unsigned int triggerPin, unsigned int echoPin, float maxDistance);
     SensorHcSr04 &setup(unsigned int triggerPin, unsigned int echoPin);
     SensorHcSr04 &setup(unsigned int triggerPin, unsigned int echoPin, unsigned long timeout);
-    SensorHcSr04 &setup(unsigned int triggerPin, unsigned int echoPin, float maxDistance);
     SensorHcSr04 &setTimeout(unsigned long timeout);
     unsigned long getTimeout();
     float measure();

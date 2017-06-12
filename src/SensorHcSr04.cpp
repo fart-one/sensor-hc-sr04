@@ -20,12 +20,6 @@ SensorHcSr04::SensorHcSr04(unsigned int triggerPin, unsigned int echoPin, unsign
   setup(triggerPin, echoPin, timeout);
 }
 
-SensorHcSr04::SensorHcSr04(unsigned int triggerPin, unsigned int echoPin, float maxDistance)
-{
-  setup(triggerPin, echoPin, maxDistance);
-}
-
-
 SensorHcSr04 &SensorHcSr04::setup(unsigned int triggerPin, unsigned int echoPin)
 {
   _triggerPin = triggerPin;
@@ -45,12 +39,6 @@ SensorHcSr04 &SensorHcSr04::setup(unsigned int triggerPin, unsigned int echoPin,
 
   return *this;
 }
-
-SensorHcSr04 &SensorHcSr04::setup(unsigned int triggerPin, unsigned int echoPin, float maxDistance)
-{
-  setup(triggerPin, echoPin, long(maxDistance * 5800));
-}
-
 
 SensorHcSr04 &SensorHcSr04::setTimeout(unsigned long timeout)
 {
