@@ -1,0 +1,12 @@
+{
+  "name": "Sensor hc-sr04",
+  "keywords": "sensor, hc-sr04, distance",
+  "description": "Class for handle hc-sr04 sensor measurements",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/fart-one/sensor-hc-sr04.git"
+  },
+  "frameworks": "*",
+  "platforms": "*"
+}
