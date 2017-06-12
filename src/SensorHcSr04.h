@@ -12,9 +12,16 @@ class SensorHcSr04
 {
   public:
     SensorHcSr04();
+    SensorHcSr04(unsigned int triggerPin, unsigned int echoPin);
+    SensorHcSr04(unsigned int triggerPin, unsigned int echoPin, unsigned long timeout);
+    SensorHcSr04 &setup(unsigned int triggerPin, unsigned int echoPin);
+    SensorHcSr04 &setup(unsigned int triggerPin, unsigned int echoPin, unsigned long timeout);
+    SensorHcSr04 &setTimeout(unsigned long timeout);
+    unsigned long getTimeout();
   private:
-    int _triggerPin;
-    int _echoPin;
+    unsigned int _triggerPin;
+    unsigned int _echoPin;
+    unsigned long _timeout;
 };
 
 #endif
