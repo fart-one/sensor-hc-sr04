@@ -14,14 +14,20 @@ class SensorHcSr04
     SensorHcSr04();
     SensorHcSr04(unsigned int triggerPin, unsigned int echoPin);
     SensorHcSr04(unsigned int triggerPin, unsigned int echoPin, unsigned long timeout);
+    SensorHcSr04(unsigned int triggerPin, unsigned int echoPin, float maxDistance);
     SensorHcSr04 &setup(unsigned int triggerPin, unsigned int echoPin);
     SensorHcSr04 &setup(unsigned int triggerPin, unsigned int echoPin, unsigned long timeout);
+    SensorHcSr04 &setup(unsigned int triggerPin, unsigned int echoPin, float maxDistance);
     SensorHcSr04 &setTimeout(unsigned long timeout);
     unsigned long getTimeout();
+    float measure();
   private:
     unsigned int _triggerPin;
     unsigned int _echoPin;
     unsigned long _timeout;
+    void _sendTrigger();
+    unsigned long _measurePulse();
+    float _calculateDistance(unsigned long pulseWidth);
 };
 
 #endif
