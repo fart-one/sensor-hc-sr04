@@ -26,6 +26,9 @@ SensorHcSr04 &SensorHcSr04::setup(unsigned int triggerPin, unsigned int echoPin)
     _echoPin    = echoPin;
     _timeout    = 0;
 
+    pinMode(_triggerPin, OUTPUT);
+    pinMode(_echoPin, INPUT);
+
     return *this;
 }
 
